@@ -10,7 +10,7 @@
 
   /*===== Font and typography =====*/
   --body-font: 'Ubuntu', sans-serif;
-  --normal-font-size: 1rem;
+  --normal-font-size: 0.9rem;
   --smaller-font-size: .813rem;
 }
 
@@ -45,7 +45,7 @@ img{
 }
 
 .drop{
-  height: 100vh;
+  height: 93vh;
   align-items: center;
   justify-content: center;
 }
@@ -80,7 +80,7 @@ img{
 .drop__name{
   font-size: var(--normal-font-size);
   color: var(--first-color);
-  font-weight: 500;
+  font-weight: bold;
 }
 
 .drop__profession{
@@ -106,4 +106,8 @@ img{
 /* Class name for the dragging item */
 .sortable-drag{
   opacity: 0;
+}
+
+footer{
+  text-align: center;
 }
