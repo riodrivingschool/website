@@ -67,12 +67,12 @@ img{
   padding: .75rem 1.25rem .75rem .75rem;
   background-color: #000000;
   box-shadow: 4px 4px 16px #a200ff, -2px -2px 16px #ffff00;
-  border-radius: 8px;
-  animation: AnimarBorda 8s linear infinite;
+  border-radius: 2.5rem;
+  animation: AnimarBorda 3s linear infinite;
 }
 @keyframes: AnimarBorda {
     0% {
-      background-position:0;
+      background-position: 0;
     }
       100% {
 
