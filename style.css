@@ -65,24 +65,10 @@ img{
   width: 410px;
   justify-content: space-between;
   padding: .75rem 1.25rem .75rem .75rem;
-  background: linear-gradient(45deg, #ffff00, #00ff00, #0099ff, #ffff00, #00ff00, #0099ff, #001aff, #a200ff);
+  background-color: #000000;
   box-shadow: 4px 4px 16px #a200ff, -2px -2px 16px #ffff00;
-  border-radius: 8px;
-  animation: Animar 3s linear infinite;
+  border-radius: 2.5rem;
 }
-@keyframes:Animar:{
-    0% {
-      background-position: 0;
-    }
-      100% {
-
-        background-position:300%;
-      }
-  
-}
-      .drop__card::after{
-        filter: blur(50px);
-      }
 .drop__img{
   width: 55px;
   height: 55px;
