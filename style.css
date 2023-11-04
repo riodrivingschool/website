@@ -68,9 +68,9 @@ img{
   background: linear-gradient(45deg, #ffff00, #00ff00, #0099ff, #ffff00, #00ff00, #0099ff, #001aff, #a200ff);
   box-shadow: 4px 4px 16px #a200ff, -2px -2px 16px #ffff00;
   border-radius: 8px;
-  animation: AnimarBorda 3s linear infinite;
+  animation: Animar 3s linear infinite;
 }
-@keyframes AnimarBorda {
+@keyframes:Animar:{
     0% {
       background-position: 0;
     }
