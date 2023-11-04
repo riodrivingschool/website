@@ -70,13 +70,13 @@ img{
   border-radius: 8px;
   animation: AnimarBorda 8s linear infinite;
 }
-@keyframes: AnimarBorda; {
+@keyframes: AnimarBorda {
     0% {
       background-position:0;
     }
       100% {
 
-        background-position:300%
+        background-position:300%;
       }
   
 }
