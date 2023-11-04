@@ -66,7 +66,7 @@ img{
   justify-content: space-between;
   padding: .75rem 1.25rem .75rem .75rem;
   background-color: #000000;
-  box-shadow: 4px 4px 16px #a200ff, -2px -2px 16px #ffff00;
+  box-shadow: 4px 4px 16px #, -2px -2px 16px #;
   border-radius: 2.5rem;
 }
 .drop__img{
