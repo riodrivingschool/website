@@ -45,7 +45,7 @@ img{
 }
 
 .drop{
-  height: 100vh;
+  height: 80vh;
   align-items: center;
   justify-content: center;
 }
@@ -109,5 +109,5 @@ img{
 
 footer{
   text-align: center;
-  height: 80vh;
+
 }
