@@ -23,7 +23,7 @@ body{
   margin: 0;
   padding: 0;
   font-family: var(--body-font);
-  background-color: var(--first-color-lighten);
+  background-color: #D9D919;
 }
 
 h1{
