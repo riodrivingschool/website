@@ -107,6 +107,21 @@ img{
   opacity: 0;
 }
 
+footer{
+  text-align: center;
+  
+}
+.centered-footer {
+    text-align: center;
+}
+
+.centered-footer img {
+    display: block;
+    margin: 0 auto;
+    width: 130px;
+    height: auto;
+}
+
 
 
 
