@@ -109,16 +109,17 @@ img{
 
 footer{
   text-align: center;
+  top: -30px;
 
 }
 .centered-footer {
     text-align: center;
-    top: -30px;
+    
 }
 
 .centered-footer img {
     display: block;
-    margin: 0 auto;
+    margin:  auto;
     width: 90px;
     height: auto;
 }
