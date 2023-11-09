@@ -113,13 +113,13 @@ footer{
 }
 .centered-footer {
     text-align: center;
-    margin: 50px;
+    margin-top: 50px;
 }
 
 .centered-footer img {
     display: block;
     margin: 0 auto;
-    width: 130px;
-    height: auto;
+    width: 100px;
+  
 }
 
