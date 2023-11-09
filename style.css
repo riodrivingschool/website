@@ -110,30 +110,17 @@ img{
 footer{
   text-align: center;
 
-  
 }
 .centered-footer {
     text-align: center;
-  position: relative;
-    top: -20px; /* Ajuste esse valor negativo conforme necessário */
-    margin-bottom: -20px;
 }
 
 .centered-footer img {
-    display: flex;
+    display: block;
     margin: 0 auto;
-    width: 130px;
+    width: 90px;
     height: auto;
-    top: -30px;
-    
 }
-.move-up-footer {
-  text-align: center;
-  position: relative;
-  top: -20px; /* Ajuste esse valor negativo conforme necessário para mover o footer para cima */
-  margin-bottom: -20px;
-}
-
 
 
 
