@@ -110,18 +110,6 @@ img{
 footer{
   text-align: center;
 
-}
-.centered-footer {
-    text-align: center;
-    
-}
-
-.centered-footer img {
-    display: flex;
-    margin:  auto;
-    width: 45px;
-    height: -150px;
-}
 
 
 
