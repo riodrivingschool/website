@@ -115,11 +115,11 @@ img{
     justify-content: center;
     align-items: center;
     position: relative;
-    top: -50px;
+    top: -65px;
 }
 
 .footer img {
-    max-width: 29%; /* Garante que a logo não exceda a largura do footer */
+    max-width: 25%; /* Garante que a logo não exceda a largura do footer */
     height: auto; /* Mantém a proporção da imagem */
 }
 
