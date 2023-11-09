@@ -120,7 +120,7 @@ footer{
 }
 
 .centered-footer img {
-    display: block;
+    display: flex;
     margin: 0 auto;
     width: 130px;
     height: auto;
