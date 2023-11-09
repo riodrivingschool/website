@@ -107,16 +107,7 @@ img{
   opacity: 0;
 }
 
-.footer {
-    background-color: #; /* Cor de fundo do footer */
-    text-align: center;
-    padding: 20px; /* Espaçamento interno do footer */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    top: -50px;
-}
+
 
 
 
