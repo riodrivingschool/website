@@ -109,7 +109,6 @@ img{
 
 footer{
   text-align: center;
-  top: -30px;
 
 }
 .centered-footer {
@@ -118,9 +117,9 @@ footer{
 }
 
 .centered-footer img {
-    display: block;
+    display: flex;
     margin:  auto;
-    width: 90px;
+    width: 45px;
     height: auto;
 }
 
