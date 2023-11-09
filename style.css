@@ -111,21 +111,5 @@ footer{
   text-align: center;
   
 }
-.centered-footer {
-    position: absolute;
-    bottom: 10px; /* Ajuste o valor conforme necessário */
-    width: 50%; /* Garante que o footer ocupe toda a largura da página */
-    text-align: center;
-}
 
-    
-}
-
-.centered-footer img {
-    display: block;
-    margin:  auto;
-    width: 50px;
-  
-  
-}
 
