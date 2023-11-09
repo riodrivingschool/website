@@ -114,7 +114,7 @@ footer{
 .centered-footer {
     position: absolute;
     bottom: 20px; /* Ajuste o valor conforme necessário */
-    width: 100%; /* Garante que o footer ocupe toda a largura da página */
+    width: 10%; /* Garante que o footer ocupe toda a largura da página */
     text-align: center;
 }
 
