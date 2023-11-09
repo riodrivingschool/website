@@ -113,6 +113,7 @@ footer{
 }
 .centered-footer {
     text-align: center;
+    top: -30px;
 }
 
 .centered-footer img {
