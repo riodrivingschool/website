@@ -118,7 +118,7 @@ img{
 }
 
 .footer img {
-    max-width: 100%; /* Garante que a logo não exceda a largura do footer */
+    max-width: 40%; /* Garante que a logo não exceda a largura do footer */
     height: auto; /* Mantém a proporção da imagem */
 }
 
