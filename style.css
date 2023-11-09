@@ -107,9 +107,20 @@ img{
   opacity: 0;
 }
 
-footer{
-  text-align: center;
-  
+.footer {
+    background-color: #; /* Cor de fundo do footer */
+    text-align: center;
+    padding: 20px; /* Espaçamento interno do footer */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
 }
+
+.footer img {
+    max-width: 100%; /* Garante que a logo não exceda a largura do footer */
+    height: auto; /* Mantém a proporção da imagem */
+}
+
 
 
