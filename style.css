@@ -44,9 +44,19 @@ img{
   display: grid;
 }
 
+.center-image {
+    text-align: center;
+    margin-top: 20px; /* Ajuste o valor de margem conforme necessário */
+}
+
+.center-image img {
+    max-width: 100%;
+    height: auto;
+}
+
 .drop{
-  height: 80vh;
-  align-items: center;
+  height: 60vh;
+  align-items: flex-end;
   justify-content: center;
 }
 
