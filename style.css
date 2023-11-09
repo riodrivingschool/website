@@ -114,6 +114,9 @@ footer{
 }
 .centered-footer {
     text-align: center;
+  position: relative;
+    top: -20px; /* Ajuste esse valor negativo conforme necessário */
+    margin-bottom: -20px;
 }
 
 .centered-footer img {
