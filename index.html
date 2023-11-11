@@ -91,7 +91,6 @@
 		<p>© All rights reserved</p>
 	</footer>
 </body>
-<!-- Adicione esta linha ao final do <body> -->
 <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
 <script>
   window.dfMessenger = window.dfMessenger || (function () {
@@ -108,7 +107,7 @@
     return true;
   })();
 </script>
-<!-- Adicione esta linha ao final do <body> -->
+
 <script>
   if ('SpeechRecognition' in window || 'webkitSpeechRecognition' in window) {
     var recognition = new (window.SpeechRecognition || window.webkitSpeechRecognition)();
@@ -128,5 +127,4 @@
     console.log('Reconhecimento de voz não suportado no seu navegador.');
   }
 </script>
-
 </html>
