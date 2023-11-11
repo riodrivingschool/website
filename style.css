@@ -67,7 +67,7 @@ header img {
   }
   100% {
     border-color: blue; /* Mude para a cor desejada no final */
-    
+    transform: rotate(360deg);
   }
 }
 
