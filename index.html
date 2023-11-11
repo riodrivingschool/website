@@ -97,18 +97,18 @@
 	<footer>
 		<p>© All rights reserved</p>
 	</footer>
-<!-- JavaScript para o botão "like" -->
-   <script>
+<!-- JavaScript para o botão "like" com Firebase -->
+    <script>
       // Configure o Firebase com as credenciais do seu projeto
       const firebaseConfig = {
-  apiKey: "AIzaSyCTjX2VFi2PQ_Tkl-2zux-TBjVs-_kUUaM",
-  authDomain: "rio-driving-school.firebaseapp.com",
-  projectId: "rio-driving-school",
-  storageBucket: "rio-driving-school.appspot.com",
-  messagingSenderId: "763118615681",
-  appId: "1:763118615681:web:d01ecdddfb70cb1ee52180",
-  measurementId: "G-9WPGN4WW3W"
-};
+        apiKey: "SUA_API_KEY",
+        authDomain: "SEU_DOMINIO.firebaseapp.com",
+        databaseURL: "https://SEU_DOMINIO.firebaseio.com",
+        projectId: "SEU_PROJETO_ID",
+        storageBucket: "SEU_DOMINIO.appspot.com",
+        messagingSenderId: "SEU_SENDER_ID",
+        appId: "SEU_APP_ID"
+      };
       
       firebase.initializeApp(firebaseConfig);
 
