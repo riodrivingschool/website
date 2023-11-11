@@ -57,7 +57,7 @@ header img {
   max-width: 180px;
   border-radius: 50%;
   border: 0.5em solid red;
-  animation: AnimaçãoBorda 100s infinite linear; /* Ajuste a duração e o estilo conforme necessário */
+  animation: AnimaçãoBorda 2s infinite linear; /* Ajuste a duração e o estilo conforme necessário */
 }
 
 @keyframes AnimaçãoBorda {
