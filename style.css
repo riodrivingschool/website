@@ -62,13 +62,13 @@ header img {
 
 @keyframes AnimaçãoBorda {
   0% {
-    border-color: conic-gradient(red, orange, yellow, green, blue, indigo, violet);
-    border-image-slice: 1;
+    border-color: gradient(red, orange, yellow, green, blue, indigo, violet);
+    border-color-slice: 1;
     
   }
   100% {
-    border-color: conic-gradient(red, orange, yellow, green, blue, indigo, violet);
-    border-image-slice: 1;
+    border-color: gradient(red, orange, yellow, green, blue, indigo, violet);
+    border-color-slice: 1;
     
   }
 }
