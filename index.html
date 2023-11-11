@@ -99,38 +99,22 @@
 	</footer>
 <!-- JavaScript para o botão "like" com Firebase -->
     <script>
-      // Configure o Firebase com as credenciais do seu projeto
-      const firebaseConfig = {
-        apiKey: "SUA_API_KEY",
-        authDomain: "SEU_DOMINIO.firebaseapp.com",
-        databaseURL: "https://SEU_DOMINIO.firebaseio.com",
-        projectId: "SEU_PROJETO_ID",
-        storageBucket: "SEU_DOMINIO.appspot.com",
-        messagingSenderId: "SEU_SENDER_ID",
-        appId: "SEU_APP_ID"
-      };
-      
-      firebase.initializeApp(firebaseConfig);
-
-      const database = firebase.database();
-      const likesRef = database.ref('likes');
-
       let liked = false;
       let likeCount = 0;
 
-      // Carrega os likes salvos no Firebase
-      likesRef.on('value', (snapshot) => {
-        const data = snapshot.val();
-        likeCount = data ? data.count : 0;
+      // Carrega os likes salvos no localStorage
+      const savedLikes = localStorage.getItem('likes');
+      if (savedLikes) {
+        likeCount = parseInt(savedLikes, 10);
         updateLikeStatus();
-      });
+      }
 
       function toggleLike() {
         liked = !liked;
         likeCount += liked ? 1 : -1;
 
-        // Salva os likes no Firebase
-        likesRef.set({ count: likeCount });
+        // Salva os likes no localStorage
+        localStorage.setItem('likes', likeCount.toString());
 
         updateLikeStatus();
       }
