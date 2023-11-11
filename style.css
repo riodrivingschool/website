@@ -56,23 +56,37 @@ header img {
   padding: 0.5em;
   max-width: 180px;
   border-radius: 50%;
-  border: 0.5em solid;
-  animation: AnimaçãoBorda 2s infinite linear; /* Ajuste a duração e o estilo conforme necessário */
+  /* background-color: rgba(255, 255, 255, 0.5); */
+  /* box-shadow: 0 0 0.15em 1em rgba(0, 0, 0, 0.1); */
+  border: 0.5em red;
 }
 
-@keyframes AnimaçãoBorda {
-  0% {
-    border-color: gradient(red, orange, yellow, green, blue, indigo, violet);
-    border-color-slice: 1;
-    
+
+
+@-webkit-keyframes Rotate {
+  from {
+    -webkit-transform: rotate(0deg);
   }
-  100% {
-    border-color: gradient(red, orange, yellow, green, blue, indigo, violet);
-    border-color-slice: 1;
-    
+  to {
+    -webkit-transform: rotate(360deg);
   }
 }
-
+@-moz-keyframes Rotate {
+  from {
+    -moz-transform: rotate(0deg);
+  }
+  to {
+    -moz-transform: rotate(360deg);
+  }
+}
+@-ms-keyframes Rotate {
+  from {
+    -ms-transform: rotate(0deg);
+  }
+  to {
+    -ms-transform: rotate(360deg);
+  }
+}
 
 /*===== DRAG and DROP =====*/
 .drop,
