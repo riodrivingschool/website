@@ -63,11 +63,11 @@ header img {
 @keyframes AnimaçãoBorda {
   0% {
     border-color: red;
-    transform: rotate(0deg);
+    
   }
   100% {
     border-color: blue; /* Mude para a cor desejada no final */
-    transform: rotate(360deg);
+    
   }
 }
 
