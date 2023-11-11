@@ -103,18 +103,40 @@
       let likeCount = 0;
 
       // Carrega os likes salvos no localStorage
-      const savedLikes = localStorage.getItem('likes');
-      if (savedLikes) {
-        likeCount = parseInt(savedLikes, 10);
+    // Import the functions you need from the SDKs you need
+import { initializeApp } from "firebase/app";
+import { getAnalytics } from "firebase/analytics";
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
+
+// Your web app's Firebase configuration
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+const firebaseConfig = {
+  apiKey: "AIzaSyCTjX2VFi2PQ_Tkl-2zux-TBjVs-_kUUaM",
+  authDomain: "rio-driving-school.firebaseapp.com",
+  projectId: "rio-driving-school",
+  storageBucket: "rio-driving-school.appspot.com",
+  messagingSenderId: "763118615681",
+  appId: "1:763118615681:web:d01ecdddfb70cb1ee52180",
+  measurementId: "G-9WPGN4WW3W"
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const analytics = getAnalytics(app);
+	    
+      likesRef.on('value', (snapshot) => {
+        const data = snapshot.val();
+        likeCount = data ? data.count : 0;
         updateLikeStatus();
-      }
+      });
 
       function toggleLike() {
         liked = !liked;
         likeCount += liked ? 1 : -1;
 
-        // Salva os likes no localStorage
-        localStorage.setItem('likes', likeCount.toString());
+        // Salva os likes no Firebase
+        likesRef.set({ count: likeCount });
 
         updateLikeStatus();
       }
