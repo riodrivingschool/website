@@ -20,12 +20,6 @@
 		<div class="border" />
 		<img src="logo-black.png" alt="Imagem Centralizada">
 	</header>
-<div id="like-container">
-      <button id="like-button" onclick="toggleLike()">
-        <i id="like-icon" class='bx bxs-heart'></i>
-        <span id="like-count">0</span>
-      </button>
-    </div>
 	<div class="drop">
 		<div class="drop__container" id="drop-items">
 
@@ -93,27 +87,59 @@
 
 		</div>
 	</div>
-
+ <div id="like-container">
+      <button id="like-button" onclick="toggleLike()">
+        <i id="like-icon" class='bx bxs-heart'></i>
+        <span id="like-count">0</span>
+      </button>
+    </div>
 	<footer>
 		<p>© All rights reserved</p>
 	</footer>
-<!-- JavaScript para o botão "like" com Firebase -->
-    <script>
+	
+<script>
       let liked = false;
       let likeCount = 0;
 
-// For Firebase JS SDK v7.20.0 and later, measurementId is optional
-const firebaseConfig = {
-  apiKey: "AIzaSyCTjX2VFi2PQ_Tkl-2zux-TBjVs-_kUUaM",
-  authDomain: "rio-driving-school.firebaseapp.com",
-  projectId: "rio-driving-school",
-  storageBucket: "rio-driving-school.appspot.com",
-  messagingSenderId: "763118615681",
-  appId: "1:763118615681:web:d01ecdddfb70cb1ee52180",
-  measurementId: "G-9WPGN4WW3W"
+      // Carrega os likes salvos no localStorage
+      const savedLikes = localStorage.getItem('likes');
+      if (savedLikes) {
+        likeCount = parseInt(savedLikes, 10);
+        updateLikeStatus();
+      }
+
+      function toggleLike() {
+        liked = !liked;
+        likeCount += liked ? 1 : -1;
+
+        // Salva os likes no localStorage
+        localStorage.setItem('likes', likeCount.toString());
+
+        updateLikeStatus();
+      }
+
+      function updateLikeStatus() {
+        const likeButton = document.getElementById("like-button");
+        const likeIcon = document.getElementById("like-icon");
+        const likeCountElement = document.getElementById("like-count");
+
+        likeIcon.className = liked ? 'bx bxs-heart' : 'bx bx-heart';
+        likeCountElement.textContent = likeCount;
+      }
+    </script>
+<script>
+      // Configure o Firebase com as credenciais do seu projeto
+      const firebaseConfig = {
+  apiKey: "AIzaSyAOnLyvOl361G3lFb8lVzjIWYoHz4Utf_k",
+  authDomain: "riodriving-44734.firebaseapp.com",
+  projectId: "riodriving-44734",
+  storageBucket: "riodriving-44734.appspot.com",
+  messagingSenderId: "483759025445",
+  appId: "1:483759025445:web:36d0c40da99fac18537ecc",
+  measurementId: "G-BSGD9JF4Y9"
 };
-	    
-    firebase.initializeApp(firebaseConfig);
+      
+      firebase.initializeApp(firebaseConfig);
 
       const database = firebase.database();
       const likesRef = database.ref('likes');
@@ -147,6 +173,5 @@ const firebaseConfig = {
         likeCountElement.textContent = likeCount;
       }
     </script>
-
 </body>
 </html>
