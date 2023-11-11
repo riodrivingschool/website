@@ -98,37 +98,7 @@
 	</footer>
 	
 <script>
-      let liked = false;
-      let likeCount = 0;
-
-      // Carrega os likes salvos no localStorage
-      const savedLikes = localStorage.getItem('likes');
-      if (savedLikes) {
-        likeCount = parseInt(savedLikes, 10);
-        updateLikeStatus();
-      }
-
-      function toggleLike() {
-        liked = !liked;
-        likeCount += liked ? 1 : -1;
-
-        // Salva os likes no localStorage
-        localStorage.setItem('likes', likeCount.toString());
-
-        updateLikeStatus();
-      }
-
-      function updateLikeStatus() {
-        const likeButton = document.getElementById("like-button");
-        const likeIcon = document.getElementById("like-icon");
-        const likeCountElement = document.getElementById("like-count");
-
-        likeIcon.className = liked ? 'bx bxs-heart' : 'bx bx-heart';
-        likeCountElement.textContent = likeCount;
-      }
-    </script>
-<script>
-      // Configure o Firebase com as credenciais do seu projeto
+      // Substitua com as configurações do seu projeto Firebase
       const firebaseConfig = {
   apiKey: "AIzaSyAOnLyvOl361G3lFb8lVzjIWYoHz4Utf_k",
   authDomain: "riodriving-44734.firebaseapp.com",
@@ -165,7 +135,6 @@
       }
 
       function updateLikeStatus() {
-        const likeButton = document.getElementById("like-button");
         const likeIcon = document.getElementById("like-icon");
         const likeCountElement = document.getElementById("like-count");
 
