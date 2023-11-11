@@ -95,5 +95,27 @@
 	<footer>
 		<p>© All rights reserved</p>
 	</footer>
+	<!-- Adicione isso no final do seu corpo <body> ou no seu arquivo JavaScript existente -->
+<script>
+  let liked = false;
+  let likeCount = 0;
+
+  function toggleLike() {
+    liked = !liked;
+    likeCount += liked ? 1 : -1;
+
+    updateLikeStatus();
+  }
+
+  function updateLikeStatus() {
+    const likeButton = document.getElementById("like-button");
+    const likeIcon = document.getElementById("like-icon");
+    const likeCountElement = document.getElementById("like-count");
+
+    likeIcon.className = liked ? 'bx bxs-heart' : 'bx bx-heart';
+    likeCountElement.textContent = likeCount;
+  }
+</script>
+
 </body>
 </html>
