@@ -12,8 +12,6 @@
 
 	<title>Rio Driving School</title>
 	
-	<script src="https://www.gstatic.com/firebasejs/10.6.0/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/10.6.0/firebase-analytics.js"></script>
 </head>
 
 <body>
@@ -88,60 +86,8 @@
 
 		</div>
 	</div>
- <div id="like-container">
-      <button id="like-button" onclick="toggleLike()">
-        <i id="like-icon" class='bx bxs-heart'></i>
-        <span id="like-count">0</span>
-      </button>
-    </div>
 	<footer>
 		<p>© All rights reserved</p>
 	</footer>
-	
-<script>
-      // Substitua com as configurações do seu projeto Firebase
-      const firebaseConfig = {
-  apiKey: "AIzaSyAOnLyvOl361G3lFb8lVzjIWYoHz4Utf_k",
-  authDomain: "riodriving-44734.firebaseapp.com",
-  projectId: "riodriving-44734",
-  storageBucket: "riodriving-44734.appspot.com",
-  messagingSenderId: "483759025445",
-  appId: "1:483759025445:web:36d0c40da99fac18537ecc",
-  measurementId: "G-BSGD9JF4Y9"
-};
-      
-
-
-      const database = firebase.database();
-      const likesRef = database.ref('likes');
-
-      let liked = false;
-      let likeCount = 0;
-
-      // Carrega os likes salvos no Firebase
-      likesRef.on('value', (snapshot) => {
-        const data = snapshot.val();
-        likeCount = data ? data.count : 0;
-        updateLikeStatus();
-      });
-
-      function toggleLike() {
-        liked = !liked;
-        likeCount += liked ? 1 : -1;
-
-        // Salva os likes no Firebase
-        likesRef.set({ count: likeCount });
-
-        updateLikeStatus();
-      }
-
-      function updateLikeStatus() {
-        const likeIcon = document.getElementById("like-icon");
-        const likeCountElement = document.getElementById("like-count");
-
-        likeIcon.className = liked ? 'bx bxs-heart' : 'bx bx-heart';
-        likeCountElement.textContent = likeCount;
-      }
-    </script>
 </body>
 </html>
