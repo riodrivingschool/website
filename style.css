@@ -56,18 +56,18 @@ header img {
   padding: 0.5em;
   max-width: 180px;
   border-radius: 50%;
-  border: 0.5em solid;
-  animation: RainbowBorder 5s infinite linear;
+  border: 0.5em solid red;
+  animation: AnimaçãoBorda 2s infinite linear; /* Ajuste a duração e o estilo conforme necessário */
 }
 
-@keyframes RainbowBorder {
+@keyframes AnimaçãoBorda {
   0% {
-    border-image: conic-gradient(red, orange, yellow, green, blue, indigo, violet);
-    border-image-slice: 1;
+    border-color: red;
+    
   }
   100% {
-    border-image: conic-gradient(red, orange, yellow, green, blue, indigo, violet);
-    border-image-slice: 1;
+    border-color: blue; /* Mude para a cor desejada no final */
+    
   }
 }
 
