@@ -33,7 +33,6 @@ body {
   background-color: #ffd700;
 }
 
-
 h1 {
   margin: 0;
 }
@@ -124,11 +123,18 @@ header img {
   width: 400px;
   display: flex;
   place-items: center;
-  justify-content: center;
+  /* justify-content: center; */
   padding: 0.75rem 1.25rem;
   background-color: rgba(255, 255, 255, 0.5);
   box-shadow: 0.5em 0.4em 0.1em rgba(0, 0, 0, 0.2);
   border-radius: 2.5rem;
+}
+
+.drop__card > div {
+  display: flex;
+  flex-grow: 1;
+  justify-content: center;
+  margin-left: -55px;
 }
 
 .drop__img {
@@ -141,6 +147,7 @@ header img {
   font-weight: bold;
   font-size: var(--normal-font-size);
   color: var(--first-color);
+  letter-spacing: 0.1em;
 }
 
 .drop__profession {
