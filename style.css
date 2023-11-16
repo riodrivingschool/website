@@ -22,16 +22,63 @@
 }
 
 body {
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
   margin: 0;
-  padding: 2em 0;
+  padding: 2em;
   min-height: 100vh;
   color: var(--first-color);
   font-family: var(--body-font);
+
   background-color: #ffd700;
+  background-image: linear-gradient(
+      30deg,
+      #efcc00 12%,
+      transparent 12.5%,
+      transparent 87%,
+      #efcc00 87.5%,
+      #efcc00
+    ),
+    linear-gradient(
+      150deg,
+      #efcc00 12%,
+      transparent 12.5%,
+      transparent 87%,
+      #efcc00 87.5%,
+      #efcc00
+    ),
+    linear-gradient(
+      30deg,
+      #efcc00 12%,
+      transparent 12.5%,
+      transparent 87%,
+      #efcc00 87.5%,
+      #efcc00
+    ),
+    linear-gradient(
+      150deg,
+      #efcc00 12%,
+      transparent 12.5%,
+      transparent 87%,
+      #efcc00 87.5%,
+      #efcc00
+    ),
+    linear-gradient(
+      60deg,
+      #efcc0077 25%,
+      transparent 25.5%,
+      transparent 75%,
+      #efcc0077 75%,
+      #efcc0077
+    ),
+    linear-gradient(
+      60deg,
+      #efcc0077 25%,
+      transparent 25.5%,
+      transparent 75%,
+      #efcc0077 75%,
+      #efcc0077
+    );
+  background-size: 80px 140px;
+  background-position: 0 0, 0 0, 40px 70px, 40px 70px, 0 0, 40px 70px;
 }
 
 h1 {
@@ -43,7 +90,7 @@ a {
 }
 a:hover > .drop__card {
   transition: 0.2s;
-  background-color: rgba(255, 255, 255, 0.3);
+  background-color: rgba(255, 255, 255, 0.8);
 }
 
 header {
@@ -52,16 +99,36 @@ header {
   position: relative;
 }
 
-header img {
-  padding: 0.5em;
-  max-width: 180px;
+header > div {
   border-radius: 50%;
-  /* background-color: rgba(255, 255, 255, 0.5); */
-  /* box-shadow: 0 0 0.15em 1em rgba(0, 0, 0, 0.1); */
-  border: 0.5em red;
 }
 
+header img {
+  max-width: 10em;
+  filter: drop-shadow(0.25em 0 rgba(255, 255, 255, 0.6))
+    drop-shadow(-0.25em 0 rgba(255, 255, 255, 0.6))
+    drop-shadow(0 0.25em rgba(255, 255, 255, 0.6))
+    drop-shadow(0 -0.25em rgba(255, 255, 255, 0.6));
+}
 
+.border {
+  border-radius: 50%;
+  border: 0.8em dashed #000;
+  background: transparent;
+
+  -webkit-animation-name: Rotate;
+  -webkit-animation-duration: 10s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+  -moz-animation-name: Rotate;
+  -moz-animation-duration: 2s;
+  -moz-animation-iteration-count: infinite;
+  -moz-animation-timing-function: linear;
+  -ms-animation-name: Rotate;
+  -ms-animation-duration: 2s;
+  -ms-animation-iteration-count: infinite;
+  -ms-animation-timing-function: linear;
+}
 
 @-webkit-keyframes Rotate {
   from {
@@ -89,30 +156,35 @@ header img {
 }
 
 /*===== DRAG and DROP =====*/
-.drop,
+.drop {
+  display: flex;
+  justify-content: center;
+  margin: 1em 0;
+}
 .drop__container {
   display: grid;
-  justify-content: center;
-}
-
-.drop__container {
-  row-gap: 1rem;
-  padding: 2rem;
+  gap: 1em;
+  width: min(100vw, 400px);
 }
 
 .drop__card {
-  width: 400px;
   display: flex;
   place-items: center;
-  justify-content: center;
-  padding: 0.75rem 1.25rem;
-  background-color: rgba(255, 255, 255, 0.5);
+  padding: 0.4rem 1.25rem;
+  background-color: rgba(255, 255, 255, 0.6);
   box-shadow: 0.5em 0.4em 0.1em rgba(0, 0, 0, 0.2);
   border-radius: 2.5rem;
 }
 
+.drop__card > div {
+  display: flex;
+  flex-grow: 1;
+  justify-content: center;
+  margin-left: -55px;
+}
+
 .drop__img {
-  width: 35px;
+  width: 55px;
   border-radius: 50%;
   margin-right: 1rem;
 }
@@ -121,6 +193,7 @@ header img {
   font-weight: bold;
   font-size: var(--normal-font-size);
   color: var(--first-color);
+  letter-spacing: 0.1em;
 }
 
 .drop__profession {
