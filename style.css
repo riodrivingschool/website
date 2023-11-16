@@ -22,11 +22,8 @@
 }
 
 body {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
   margin: 0;
-  padding: 1em 2em;
+  padding: 2em;
   min-height: 100vh;
   color: var(--first-color);
   font-family: var(--body-font);
